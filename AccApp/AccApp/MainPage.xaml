@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AccApp.MainPage">
+
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Label Grid.Row="0" Grid.ColumnSpan="2" x:Name="LabelX" Margin="5" Text="X = 0"/>
+            <Label Grid.Row="1" Grid.ColumnSpan="2" x:Name="LabelY" Margin="5" Text="Y = 0"/>
+
+            <Button Grid.Row="2" Grid.Column="0" Text="Start" x:Name="BtnStart" Margin="5" Clicked="BtnStart_Clicked" />
+            <Button Grid.Row="2" Grid.Column="1" Text="Stop" x:Name="BtnStop" Margin="5" Clicked="BtnStop_Clicked" />
+
+            <AbsoluteLayout Grid.Row="3" Grid.ColumnSpan="2" x:Name="CircleLayout" IsClippedToBounds="True" Margin="5" 
+                    BackgroundColor="DarkGray" SizeChanged="CircleLayout_SizeChanged" />
+        </Grid>
+    </ContentPage.Content>
+    
+</ContentPage>
